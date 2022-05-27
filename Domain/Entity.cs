@@ -1,6 +1,8 @@
-﻿namespace ShoppingApp.Domain;
+﻿using Flunt.Notifications;
 
-public abstract class Entity
+namespace ShoppingApp.Domain;
+
+public abstract class Entity : Notifiable<Notification>
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

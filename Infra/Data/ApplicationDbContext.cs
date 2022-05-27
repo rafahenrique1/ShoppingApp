@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Flunt.Notifications;
+using Microsoft.EntityFrameworkCore;
 using ShoppingApp.Domain.Products;
 
 namespace ShoppingApp.Infra.Data;
@@ -14,6 +15,7 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Ignore<Notification>();
         builder.Entity<Product>().Property(p => p.Name).IsRequired();
         builder.Entity<Product>().Property(p => p.Description).HasMaxLength(255);
         builder.Entity<Category>().Property(p => p.Name).IsRequired();
