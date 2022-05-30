@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Endpoints.Categories;
+using ShoppingApp.Endpoints.Employees;
 using ShoppingApp.Infra.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,8 +20,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapMethods(CategoryPost.Template, CategoryPost.Methods, CategoryPost.Handler);
-app.MapMethods(CategoryGetAll.Template, CategoryGetAll.Methods, CategoryGetAll.Handler);
-app.MapMethods(CategoryPut.Template, CategoryPut.Methods, CategoryPut.Handler);
+app.MapMethods(CategoryPost.Template, CategoryPost.Methods, CategoryPost.Handle);
+app.MapMethods(CategoryGetAll.Template, CategoryGetAll.Methods, CategoryGetAll.Handle);
+app.MapMethods(CategoryPut.Template, CategoryPut.Methods, CategoryPut.Handle);
+app.MapMethods(EmployeePost.Template, EmployeePost.Methods, EmployeePost.Handle);
 
 app.Run();
