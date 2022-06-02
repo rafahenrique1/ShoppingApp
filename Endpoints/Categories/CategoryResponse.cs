@@ -1,6 +1,6 @@
 ﻿namespace ShoppingApp.Endpoints.Categories;
 
-public class CategoryResponse
+public record CategoryResponse
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace ShoppingApp.Endpoints.Categories;
 
-public class CategoryRequest
+public record CategoryRequest
 {
     public string Name { get; set; }
     public bool Active { get; set; }

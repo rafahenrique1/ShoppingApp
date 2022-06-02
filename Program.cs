@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Endpoints.Categories;
 using ShoppingApp.Endpoints.Employees;
+using ShoppingApp.Endpoints.Security;
 using ShoppingApp.Infra.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,5 +27,6 @@ app.MapMethods(CategoryGetAll.Template, CategoryGetAll.Methods, CategoryGetAll.H
 app.MapMethods(CategoryPut.Template, CategoryPut.Methods, CategoryPut.Handle);
 app.MapMethods(EmployeePost.Template, EmployeePost.Methods, EmployeePost.Handle);
 app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.Handle);
+app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Handle);
 
 app.Run();
