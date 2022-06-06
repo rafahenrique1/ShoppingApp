@@ -1,4 +1,4 @@
-﻿using ShoppingApp.Domain.Products;
+﻿using Microsoft.AspNetCore.Authorization;
 using ShoppingApp.Infra.Data;
 
 namespace ShoppingApp.Endpoints.Categories;
@@ -9,6 +9,7 @@ public class CategoryGetAll
     public static string[] Methods => new string[] { HttpMethod.Get.ToString() };
     public static Delegate Handle => Action;
 
+    [Authorize]
     public static IResult Action(ApplicationDbContext context)
     {
         var categories = context.Categories.ToList();
