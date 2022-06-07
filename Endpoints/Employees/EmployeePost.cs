@@ -1,8 +1,4 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-
-namespace ShoppingApp.Endpoints.Employees;
+﻿namespace ShoppingApp.Endpoints.Employees;
 
 public class EmployeePost
 {

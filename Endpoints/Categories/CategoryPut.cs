@@ -1,9 +1,4 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using ShoppingApp.Infra.Data;
-
-namespace ShoppingApp.Endpoints.Categories;
+﻿namespace ShoppingApp.Endpoints.Categories;
 
 public class CategoryPut
 {

@@ -1,8 +1,4 @@
-﻿using Dapper;
-using Microsoft.Data.SqlClient;
-using ShoppingApp.Endpoints.Employees;
-
-namespace ShoppingApp.Infra.Data;
+﻿namespace ShoppingApp.Infra.Data;
 
 public class QueryAllUsersWithClaimName
 {

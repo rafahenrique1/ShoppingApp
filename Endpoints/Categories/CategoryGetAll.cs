@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using ShoppingApp.Infra.Data;
-
-namespace ShoppingApp.Endpoints.Categories;
+﻿namespace ShoppingApp.Endpoints.Categories;
 
 public class CategoryGetAll
 {

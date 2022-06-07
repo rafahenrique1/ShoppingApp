@@ -1,10 +1,4 @@
-﻿using Flunt.Notifications;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using ShoppingApp.Domain.Products;
-
-namespace ShoppingApp.Infra.Data;
+﻿namespace ShoppingApp.Infra.Data;
 
 public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {

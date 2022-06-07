@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using ShoppingApp.Infra.Data;
-
-namespace ShoppingApp.Endpoints.Employees;
+﻿namespace ShoppingApp.Endpoints.Employees;
 
 public class EmployeeGetAll
 {

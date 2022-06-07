@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-
-namespace ShoppingApp.Endpoints.Security;
+﻿namespace ShoppingApp.Endpoints.Security;
 
 public class TokenPost
 {

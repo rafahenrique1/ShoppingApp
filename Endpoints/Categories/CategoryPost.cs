@@ -1,9 +1,4 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using ShoppingApp.Domain.Products;
-using ShoppingApp.Infra.Data;
-
-namespace ShoppingApp.Endpoints.Categories;
+﻿namespace ShoppingApp.Endpoints.Categories;
 
 public class CategoryPost
 {
