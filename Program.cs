@@ -1,5 +1,6 @@
 ﻿using Serilog;
 using Serilog.Sinks.MSSqlServer;
+using ShoppingApp.Endpoints.Products;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration["ConnectionString:ShoppingAppDb"]);
@@ -70,6 +71,8 @@ app.MapMethods(CategoryPut.Template, CategoryPut.Methods, CategoryPut.Handle);
 app.MapMethods(EmployeePost.Template, EmployeePost.Methods, EmployeePost.Handle);
 app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.Handle);
 app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Handle);
+app.MapMethods(ProductPost.Template, ProductPost.Methods, ProductPost.Handle);
+app.MapMethods(ProductGetAll.Template, ProductGetAll.Methods, ProductGetAll.Handle);
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
