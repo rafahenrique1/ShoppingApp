@@ -9,7 +9,7 @@ public class CategoryGetAll
     [Authorize(Policy = "EmployeePolicy")]
     public static IResult Action(ApplicationDbContext context)
     {
-        var categories = context.Categories.ToList();
+        var categories = context.Categories.AsNoTracking().ToList();
         var response = categories.Select(p => new CategoryResponse(p.Id, p.Name, p.Active));
 
         return Results.Ok(response);
