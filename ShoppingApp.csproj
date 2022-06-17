@@ -29,6 +29,10 @@
     <Using Include="ShoppingApp.Endpoints.Categories" />
     <Using Include="ShoppingApp.Endpoints.Security" />
     <Using Include="ShoppingApp.Infra.Data" />
+    <Using Include="ShoppingApp.Endpoints.Products" />
+    <Using Include="ShoppingApp.Endpoints.Clients" />
+    <Using Include="ShoppingApp.Domain.Users" />
+    
   </ItemGroup>
 
   <ItemGroup>
