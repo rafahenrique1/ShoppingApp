@@ -32,6 +32,7 @@
     <Using Include="ShoppingApp.Endpoints.Products" />
     <Using Include="ShoppingApp.Endpoints.Clients" />
     <Using Include="ShoppingApp.Domain.Users" />
+    <Using Include="ShoppingApp.Domain.Orders" />
     
   </ItemGroup>
 
