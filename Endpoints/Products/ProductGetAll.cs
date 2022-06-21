@@ -13,7 +13,7 @@ public class ProductGetAll
             .Include(p => p.Category)
             .OrderBy(p => p.Name).ToList();
 
-        var results = products.Select(p => new ProductResponse(p.Name, p.Category.Name, p.Description, p.Price, p.HasStock, p.Active));
+        var results = products.Select(p => new ProductResponse(p.Id, p.Name, p.Category.Name, p.Description, p.Price, p.HasStock, p.Active));
 
         return Results.Ok(results);
     }
