@@ -1,6 +1,5 @@
 ﻿using Serilog;
 using Serilog.Sinks.MSSqlServer;
-using ShoppingApp.Endpoints.Orders;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration["ConnectionString:ShoppingAppDb"]);
@@ -25,6 +24,7 @@ builder.Services.AddAuthorization(options =>
     .Build();
 
     options.AddPolicy("EmployeePolicy", p => p.RequireAuthenticatedUser().RequireClaim("EmployeeCode"));
+    options.AddPolicy("CpfPolicy", p => p.RequireAuthenticatedUser().RequireClaim("Cpf"));
 });
 
 builder.Services.AddAuthentication(x =>
@@ -84,6 +84,7 @@ app.MapMethods(ClientPost.Template, ClientPost.Methods, ClientPost.Handle);
 app.MapMethods(ClientGet.Template, ClientGet.Methods, ClientGet.Handle);
 
 app.MapMethods(OrderPost.Template, OrderPost.Methods, OrderPost.Handle);
+app.MapMethods(OrderGet.Template, OrderGet.Methods, OrderGet.Handle);
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
